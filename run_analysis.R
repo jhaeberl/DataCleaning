@@ -95,7 +95,14 @@ df$activity <-  factor(df$activity, levels = activity_labels[,1], labels = activ
 # Step 4
 # Appropriately labels the dataset with descriptive variable names
 # We set the variable names using the feature names
-colnames(df) <- c("subject", "activity", features[cols,2])
+# Note: parenthesis and hyphens are not allowed in variable names. So the
+# function read.table() will replace such characters with a . by default.
+# To ensure that our variable names are not changed when somebody reads
+# in the data we preprocess the names by removing the parentheses and
+# replacing the hyphens with a . (dot).
+features[cols, 2] = gsub("\\(\\)", "", features[cols, 2])
+features[cols, 2] = gsub("-", ".", features[cols, 2])
+colnames(df) <- c("subject", "activity", features[cols, 2])
 
 ################################
 # Step 5
@@ -114,5 +121,5 @@ df_averages <- group_by(df, subject, activity) %>%
 # selected features
 dim(df_averages)
 
-# finally, write the results to the text file tidy.txt
-write.table(df_averages, file = "tidy.txt", row.names = FALSE)
+# finally, write the results to the text file output.txt
+write.table(df_averages, file = "output.txt", row.names = FALSE)
