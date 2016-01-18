@@ -93,7 +93,7 @@ df$activity <-  factor(df$activity, levels = activity_labels[,1], labels = activ
 
 ################################
 # Step 4
-# Appropriately labels the dataset with descriptive variable names
+# Appropriately label the dataset with descriptive variable names
 # We set the variable names using the feature names
 # Note: parenthesis and hyphens are not allowed in variable names. So the
 # function read.table() will replace such characters with a . by default.
@@ -106,7 +106,7 @@ colnames(df) <- c("subject", "activity", features[cols, 2])
 
 ################################
 # Step 5
-# From the data set in step 4, creates a second, independent tidy
+# From the data set in step 4, create a second, independent tidy
 # dataset with the average of each variable for each activity and
 # each subject.
 
