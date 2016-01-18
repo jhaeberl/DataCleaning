@@ -12,7 +12,7 @@ The code file contains extensive comments describing the process and does the fo
 * Merge the training and the test sets to create one data set 
 * Extracts only the measurements on the mean and standard deviation for each measurement
 * Use descriptive activity names, stored in the file activity_labels.txt, to name the activities in the data set and convert the corresponding variable into a factor
-* Appropriately label the dataset with descriptive variable names; we preprocess the names so that they are valid variable names in R
+* Appropriately label the dataset with descriptive variable names; preprocess the names so that they are valid variable names in R
 * Create a new tidy data set containing the average of each variable for each activity and each subject
 
 The results are stored in the file [output.txt](https://github.com/jhaeberl/DataCleaning/blob/master/output.txt).
