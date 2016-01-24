@@ -9,7 +9,9 @@ There is one attribute each for the subject and activity.
 * __subject__ - values: 1 to 30
 * __activity__ - values: WALKING, WALKING\_UPSTAIRS, WALKING\_DOWNSTAIRS, SITTING, STANDING, LAYING
 
-The remaining 66 attributes are numerical values that were obtained from the features of the original data set corresponding to the mean and standard deviation of each measurement by computing the average for each subject and activity. 
+The remaining 66 attributes are numerical values that were obtained from the features of the original data set corresponding to the mean and standard deviation of each measurement by computing the average value for each subject and activity. The names of these attributes have been made into valid R variable names but the coorespondence with the feature names in the original data set is easy to figure out. For example, the attribute __tBodyAcc.mean.X__ corresponds to the feature __tBodyAcc-mean()-X__ in the original data set and __tBodyAcc.std.Z__ corresponds to __tBodyAcc-std()-Z__, etc. See the [R file](https://github.com/jhaeberl/DataCleaning/blob/master/run_analysis.R) for details. Note that the units of the attributes are the same as those of the corresponding features in the original data set since the values are averages of the corresponding feature values. See the [original data set](http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones) for a detailed discussion of how the original features were computed.
+
+Here is a list of the 66 attributes:
 
 * __tBodyAcc.mean.X__
 * __tBodyAcc.mean.Y__

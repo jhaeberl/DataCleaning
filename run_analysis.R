@@ -14,6 +14,8 @@
 
 # First retrieve the data from the course web site
 fileurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+# on windows boxes one needs to set the mode argument to the download.fiel()
+# function to the value "wb" to ensure the file is saved a binary file.
 download.file(fileurl, destfile = "data.zip", mode = "wb")
 
 if (!file.exists("UCI HAR Dataset")) {
